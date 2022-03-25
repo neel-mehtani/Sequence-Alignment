@@ -1,0 +1,51 @@
+{\bf [25 points] Multiple Sequence Alignment (MSA)}\\
+\begin{enumerate}
+
+\item We discussed in class (and in problem \ref{NW}) a method to align two strings using dynamic programming. At each step, the algorithm needs to look at three neighbors to fill in a dynamic programming table cell. Consider now the problem of multiple sequence alignment.  Assume we are attempting to align three strings simultaneously using a dynamic programming cube in a similar fashion. How many neighbors will the algorithm need to check to fill in each entry in this matrix? Explain.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{solution}
+Add your solution here.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Extend this further to $K>3$ strings, each of length roughly $N$. What is the runtime complexity of the alignment algorithm in terms of $K$ and $N$ (Explain how you arrive at this answer)? Would you consider this an efficient algorithm?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{solution}
+Add your solution here.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Does this method result in the optimal multiple sequence alignment? (Yes or No is fine).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{solution}
+Add your solution here.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Given the run time discussed above, multiple sequence alignment methods rely on heuristics. Consider the following method:\\
+We are performing a progressive multiple sequence alignment. The scoring is (match $m=2$, mismatch $n=-1$, gap $g=-1$, and gaps that align with each other do not contribute to the score).
+We first align Seq1 and Seq2. Now consider adding the sequence Seq3=\texttt{ACT} to the pairwise alignment. The total score for the MSA (which we are maximizing) is the sum of pairwise alignments between the sequences. 
+\begin{align*}
+Seq1& \texttt{  A\_GT}\\
+Seq2& \texttt{  ACGT}\\
+\end{align*}
+\begin{itemize}
+\item What is the optimal alignment and its score for Seq3 under the sum-of-pairs MSA scoring method? Make sure to correctly score induced alignments. Show your work.
+\begin{solution}
+Add your solution here.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item What should the mismatch score be so that the two possible alignments (assigning the C of Seq3 to position 2 or position 3) have equal scores?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{solution}
+Add your solution here.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item As we see in part $(b)$, global alignment for multiple sequences is very time consuming, especially when there are a large number of sequences need to be aligned together. Therefore, heuristic algorithms are needed for the multiple sequence alignment problem. Please come up with an efficient heuristic algorithm, explain how it works and give the runtime complexity. 
+
+(Hint: Possible heuristic methods can be based on finding a reasonable ordering of sequences for alignment, e.g. by clustering the sequences or constructing a hierarchical tree according to some similarity metric. If you have other good ideas on how to solve the multiple sequence alignment problem, you can definitely ignore this hint.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{solution}
+Add your solution here.
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}
+\end{enumerate}
